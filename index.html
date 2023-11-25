@@ -7,32 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather app</title>
     <link rel="stylesheet" href="main.css" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="widget">
         <img src="" alt="" srcset="" id="weather-icon">
-        <div id="location">Unable to Fetch Weather</div>
-        <div class="desc">No Information Available.</div>
+        <div id="location">Welcome to the weather forecast app!</div>
+        <div class="desc">Enter the coordinates below, to get weather information</div>
         <div class="weather">
-            <div class="c">Error</div>
+            <div class="c"></div>
             <div class="circle"></div>
-            <div class="f">Error</div>
+            <div class="f"></div>
         </div>
-        <div class="info">
-            <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
-            <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+        <div class="info" style="display: none;">
+            <h4>Sunrise: <span class="sunrise"></span></h4>
+            <h4>Sunset: <span class="sunset"></span></h4>
         </div>
         <div class="coordinates">
             <input type="text" id="longitude" placeholder="Enter the longitude">
             <input type="text" id="latitude" placeholder="Enter the latitude">
             <button id="submit-coordinates">Get the weather</button>
         </div>
+        <div id="map" class="map"></div>
+        <button id="create-widget">Create a widget</button>
+        <div id="widgets-container"></div>
     </div>
+
     <script src="script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0c2b78b7-c237-4d6f-876a-8357fa98d13e&lang=en_US" type="text/javascript"></script>
 </body>
 
 </html>
